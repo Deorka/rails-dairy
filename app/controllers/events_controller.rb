@@ -1,7 +1,7 @@
 
 class EventsController < ApplicationController
 
-  #http_basic_authenticate_with name: "alena", password: "0000", only: :destroy
+  http_basic_authenticate_with name: "alena", password: "0000", only: :show
 
   def index
     @events = Event.all
