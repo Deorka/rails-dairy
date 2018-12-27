@@ -1,14 +1,39 @@
-<h1>Dairy</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
 
-<p>Write down here when and what you need to do</p>
+<body>
+  <nav class="navbar" style="background-color: #2ecc71; margin: 20px;">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <span class="navbar-brand">My Dairy</span>
+      </div>
+      <ul class="nav navbar-nav">
+        <li><a href="#">Home</a></li>
+        <li><%= link_to 'Events', controller: 'events' %></li>
+      </ul>
+    </div>
+  </nav>
+  <div class="container">
+  <div class="col-sm-6">
+    <p>Write down here when and what you need to do...</p>
+  </div>
+  <div class="col-sm-6">
 
+    <ul class="list-group">
+      <li class="list-group-item" style="background-color: #2ecc71;">Weather for today in Rostov-on-Don</li>
+      <li class="list-group-item">Temperature: <%= @weather["Temperature"] %>°C</li>
+      <li class="list-group-item">Wind Speed: <%= @weather["Wind Speed"] %></li>
+      <li class="list-group-item">Precipitation:<%= @weather["Precipitation"] %></li>
+      <li class="list-group-item">Summary: <%= @weather["Summary"] %></li>
+    </ul>
+  </div>
+</div>
+</body>
 
-<%= link_to 'My Dairy', controller: 'events' %>
-
-<p> Weather for today in Rostov on Don</p>
-<p>
-<%= @weather["Summary"] %>
-<%= @weather["Precipitation"] %>
-<%= @weather["Temperature"] %>
-<%= @weather["Wind Speed"] %>
-</p>
+</html>

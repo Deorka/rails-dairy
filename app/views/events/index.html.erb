@@ -1,11 +1,33 @@
-<h1>Listing dairy</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
 
+<body>
 
-<%= link_to 'Dairy', root_path %>
+  <nav class="navbar" style="background-color: #2ecc71; margin: 20px;">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <span class="navbar-brand">My Dairy</span>
+      </div>
+      <ul class="nav navbar-nav">
+        <li><%= link_to 'Home', root_path %></li>
+        <li><a href="#">Events</a></li>
+      </ul>
+    </div>
+  </nav>
 
-<table>
+  <div class="container">
+
+<table class="table">
   <tr>
     <th>Date</th>
+    <th>Country</th>
+    <th>Town</th>
     <th>Event</th>
     <th></th>
   </tr>
@@ -16,9 +38,9 @@
       <td><%= event.country %></td>
       <td><%= event.town %></td>
       <td><%= event.event_text %></td>
-      <td><%= link_to 'Show', event_path(event) %></td>
-      <td><%= link_to 'Edit', edit_event_path(event) %></td>
-      <td><%= link_to 'Delete', event_path(event),
+      <td style="width: 20px;"><%= link_to 'Show', event_path(event) %></td>
+      <td style="width: 20px;"><%= link_to 'Edit', edit_event_path(event) %></td>
+      <td style="width: 20px;"><%= link_to 'Delete', event_path(event),
                       method: :delete,
                       data: { confirm: 'Are you sure?' } %></td>
     </tr>
@@ -27,3 +49,7 @@
 
 <%= link_to 'New event', new_event_path %>
 
+</div>
+</body>
+
+</html>

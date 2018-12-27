@@ -8,7 +8,7 @@ class WelcomeController < ApplicationController
     weather = {
         "Summary" => data["summary"],
         "Precipitation" => data["precipType"],
-        "Temperature" => (data["temperature"].to_f  - 32) * 5.0 / 9.0,
+        "Temperature" => ((data["temperature"].to_f  - 32) * 5.0 / 9.0).to_i,
         "Wind Speed" => data["windSpeed"]
     }
     @weather = weather
