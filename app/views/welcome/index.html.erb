@@ -1,0 +1,14 @@
+<h1>Dairy</h1>
+
+<p>Write down here when and what you need to do</p>
+
+
+<%= link_to 'My Dairy', controller: 'events' %>
+
+<p> Weather for today in Rostov on Don</p>
+<p>
+<%= @weather["Summary"] %>
+<%= @weather["Precipitation"] %>
+<%= @weather["Temperature"] %>
+<%= @weather["Wind Speed"] %>
+</p>

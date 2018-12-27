@@ -1,0 +1,29 @@
+<h1>Listing dairy</h1>
+
+
+<%= link_to 'Dairy', root_path %>
+
+<table>
+  <tr>
+    <th>Date</th>
+    <th>Event</th>
+    <th></th>
+  </tr>
+
+  <% @events.each do |event| %>
+    <tr>
+      <td><%= event.date_date %></td>
+      <td><%= event.country %></td>
+      <td><%= event.town %></td>
+      <td><%= event.event_text %></td>
+      <td><%= link_to 'Show', event_path(event) %></td>
+      <td><%= link_to 'Edit', edit_event_path(event) %></td>
+      <td><%= link_to 'Delete', event_path(event),
+                      method: :delete,
+                      data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+  <% end %>
+</table>
+
+<%= link_to 'New event', new_event_path %>
+

@@ -1,0 +1,22 @@
+<p>
+  <strong>Date:</strong>
+  <%= @event.date_date %>
+</p>
+
+<p>
+  <strong>Country:</strong>
+  <%= @event.country %>
+</p>
+
+<p>
+  <strong>Town:</strong>
+  <%= @event.town %>
+</p>
+
+<p>
+  <strong>Event:</strong>
+  <%= @event.event_text %>
+</p>
+
+<%= link_to 'Edit', edit_event_path(@event) %> |
+<%= link_to 'Back', events_path %>
